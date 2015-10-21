@@ -115,38 +115,44 @@
           <iron-pages attr-for-selected="data-route" selected="{{route}}">
 
             <section data-route="home">
-              <paper-material elevation="1" class="paper-font-body2 center horizontal layout">
-                <template is="dom-bind" id="checkin">
-                  <section>
-                    <paper-button class="btn horizontal layout" on-tap="showDialog" raised>
-                      <iron-icon icon="today"></iron-icon>  
-                      <h1>{{dateFormat(date, 'L')}}</h1>
-                    </paper-button>
-                    <paper-dialog id="dialog" class="paper-date-picker-dialog" modal on-iron-overlay-closed="dismissDialog">
-                      <paper-date-picker id="picker" responsive-width="655px"></paper-date-picker>
-                      <div class="buttons">
-                        <paper-button dialog-dismiss>Cancel</paper-button>
-                        <paper-button dialog-confirm>OK</paper-button>
-                      </div>
-                    </paper-dialog>
-                  </section>
-                </template>
+              <paper-material elevation="1" class="paper-font-body2">
                 
-                <template is="dom-bind" id="checkout">
-                  <section>
-                    <paper-button class="btn horizontal layout" on-tap="showDialog" raised>
-                      <iron-icon icon="today"></iron-icon>  
-                      <h1>{{dateFormat(date, 'L')}}</h1>
-                    </paper-button>
-                    <paper-dialog id="dialog" class="paper-date-picker-dialog" modal on-iron-overlay-closed="dismissDialog">
-                      <paper-date-picker id="picker" responsive-width="655px"></paper-date-picker>
-                      <div class="buttons">
-                        <paper-button dialog-dismiss>Cancel</paper-button>
-                        <paper-button dialog-confirm>OK</paper-button>
-                      </div>
-                    </paper-dialog>
-                  </section>
-                </template>
+              <!-- laterooms-datepicker element code -->
+                <div class="box center horizontal layout">
+                  <template is="dom-bind" id="checkin">
+                    <section>
+                      <paper-button class="btn horizontal layout" on-tap="showDialog" raised>
+                        <iron-icon icon="today"></iron-icon>  
+                        <h1>{{dateFormat(date, 'L')}}</h1>
+                      </paper-button>
+                      <paper-dialog id="dialog" class="paper-date-picker-dialog" modal on-iron-overlay-closed="dismissDialog">
+                        <paper-date-picker id="picker" responsive-width="655px"></paper-date-picker>
+                        <div class="buttons">
+                          <paper-button dialog-dismiss>Cancel</paper-button>
+                          <paper-button dialog-confirm>OK</paper-button>
+                        </div>
+                      </paper-dialog>
+                    </section>
+                  </template>
+                
+                  <template is="dom-bind" id="checkout">
+                    <section>
+                      <paper-button class="btn horizontal layout" on-tap="showDialog" raised>
+                        <iron-icon icon="today"></iron-icon>  
+                        <h1>{{dateFormat(date, 'L')}}</h1>
+                      </paper-button>
+                      <paper-dialog id="dialog" class="paper-date-picker-dialog" modal on-iron-overlay-closed="dismissDialog">
+                        <paper-date-picker id="picker" responsive-width="655px"></paper-date-picker>
+                        <div class="buttons">
+                          <paper-button dialog-dismiss>Cancel</paper-button>
+                          <paper-button dialog-confirm>OK</paper-button>
+                        </div>
+                      </paper-dialog>
+                    </section>
+                  </template>
+                </div>
+            <!--  End of laterooms-datepicker element code -->
+                
               </paper-material>
 
             </section>
